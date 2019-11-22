@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login and Signup page</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+    
+</head>
+<body>
+<div class="wrapper">
+    <div class="container">
+      
+      <div class="signup">Sign Up</div>
+      <div class="login">Log In</div>
+      
+       <div class="signup-form">
+            <p>
+                <label for="emailSignUp" class="emailLabel">Email</label>
+                <input type="text" placeholder="Your Email Address" class="input" id="emailSignUp" required><br />
+            </p>
+            <p>
+                <label for="usernameSignUp" class="usernameLabel">Username</label>
+                <input type="text" placeholder="Choose a Username" class="input" id="usernameSignUp" required><br />
+            </p>
+            <p>
+                <label for="passwordSignUp" class="passwordLabel">Password</label>
+                <input type="password" placeholder="Choose a Password" class="input" id="passwordSignUp" required><br />
+            </p>
+            <p>
+                <label for="confirmPasswordSignUp" class="confirmPasswordLabel">Confirm Password</label>
+                <input type="password" placeholder="Confirm your Password" class="input" id="confirmPasswordSignUp" required><br />
+            </p>
+            <div class="submitBtn" type="submit">Sign Up</div>
+       </div>
+      
+      <div class="login-form">
+          <p>
+              <label for="emailUnameLogin" class="emailUnameLabel">Email/Username</label>
+              <input type="text" placeholder="Email or Username" class="input" id="emailUnameLogin" required><br />
+          </p>
+          <p>
+              <label for="passwordLogin" class="passwordLabel">Password</label>
+              <input type="password" placeholder="Password" class="input" id="passwordLogin" required><br />
+          </p>
+          <div class="loginBtn" type="submit">log in</div>
+       </div>
+      
+    </div>
+  </div>
+  <div id="pswd_info">
+        <h4>Password must meet the following requirements:</h4>
+        <ul>
+            <li id="letter" class="invalid">At least <strong>one letter</strong></li>
+            <li id="capital" class="invalid">At least <strong>one capital letter</strong></li>
+            <li id="number" class="invalid">At least <strong>one number</strong></li>
+            <li id="length" class="invalid">Be at least <strong>8 characters</strong></li>
+        </ul>
+    </div>
+  
+      <script> </script>
+</body>
+</html>
+
+
+
+
+
