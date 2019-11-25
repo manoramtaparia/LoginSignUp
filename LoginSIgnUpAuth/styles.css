@@ -10,12 +10,19 @@
     font-family: roboto;
     user-select: none;
   }
-  
+  .hide{
+    display: block;
+    color: red;
+    font-size: 10px;
+    padding: 2px 0px;
+    position: relative;
+  }
+
   .container{
-    width: 450px;
+    width: 550px;
     margin: 30px auto;
   }
-  
+
   .signup,
   .login{
     width: 50%;
@@ -34,7 +41,7 @@
     clear: both;
     width: 100%;
     box-sizing: border-box;
-    height: 546px;
+    height: auto;
   }
   ul, li {
     margin:0;
@@ -53,7 +60,7 @@
     clear: both;
     width: 100%;
     box-sizing: border-box;
-    height: 338px;
+    height: auto;
   }
   
   .input{
@@ -73,13 +80,11 @@
   }
 
   .invalid {
-    background:url(../images/invalid.png) no-repeat 0 50%;
     padding-left:22px;
     line-height:24px;
     color:#ec3f41;
 }
 .valid {
-    background:url(../images/valid.png) no-repeat 0 50%;
     padding-left:22px;
     line-height:24px;
     color:#3a7d34;
