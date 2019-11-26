@@ -26,56 +26,75 @@ $(document).ready(function () {
         //EMPTY FIRST NAME BOX VALIDATION
         firstName = $("#firstNameSignUp").val();
         if (firstName == '') {
-            $(".firstname-error-empty").show();
+            $("#firstname-error-empty").show();
         }
         $("#firstNameSignUp").focus(function () {
-            $(".firstname-error-empty").hide();
+            $("#firstname-error-empty").hide();
         });
 
         //EMPTY LAST NAME BOX VALIDATION
         lastName = $("#lastNameSignUp").val();
         if (lastName == '') {
-            $(".lastname-error-empty").show();
+            $("#lastname-error-empty").show();
         }
         $("#lastNameSignUp").focus(function () {
-            $(".lastname-error-empty").hide();
+            $("#lastname-error-empty").hide();
         });
         
         //EMPTY EMAIL BOX VALIDATION
         email = $("#emailSignUp").val();
         if (email == '') {
-            $(".email-error-empty").show();
+            $("#email-error-empty").show();
         }
         $("#emailSignUp").focus(function () {
-            $(".email-error-empty").hide();
+            $("#email-error-empty").hide();
         });
 
         //EMPTY USERNAME BOX VALIDATION
         username = $("#usernameSignUp").val();
         if (username == '') {
-            $(".username-error-empty").show();
+            $("#username-error-empty").show();
         }
         $("#usernameSignUp").focus(function () {
-            $(".username-error-empty").hide();
+            $("#username-error-empty").hide();
         });
 
         //EMPTY PASSWORD BOX VALIDATION
         password = $("#passwordSignUp").val();
         if (password == '') {
-            $(".password-error-empty").show();
+            $("#password-error-empty").show();
         }
         $("#passwordSignUp").focus(function () {
-            $(".password-error-empty").hide();
+            $("#password-error-empty").hide();
         });
 
         //EMPTY CONFIRM PASSWORD BOX VALIDATION
         confirmPassword = $("#confirmPasswordSignUp").val();
         if (confirmPassword == '') {
-            $(".confirmPassword-error-empty").show();
+            $("#confirmPassword-error-empty").show();
         }
         $("#confirmPasswordSignUp").focus(function () {
-            $(".confirmPassword-error-empty").hide();
+            $("#confirmPassword-error-empty").hide();
         });
+
+        //FINAL SIGN UP BUTTON VALIDATION (IF NO ERRORS GO AHEAD)
+        if(!($(".error").is(':visible'))){
+            alert("Successfully signed up!");
+        }
+
+        // if( FIRSTnAME !== "" && LASTNAME !== "" ){
+        //     var data = {
+        //         userName: "Voiop"
+        //     }
+        //     ajax.post(url, data, sucess(res){
+
+        //     }, error(){
+
+        //     })
+        //     alert("SIGNUP SUCCESS")
+        // }
+        
+
 
     });
 
@@ -89,13 +108,14 @@ $(document).ready(function () {
             //$('#invalid_email').text()
             //$('#invalid_email').innerHTML()
             //$('#invalid_email').val()
-            $('.email-error-format').show();
+            $('#email-error-format').show();
             return false;
         }
     }).focus(function () {
-        $('.email-error-format').hide();
+        $('#email-error-format').hide();
     });
-
+    
+    
     $("#usernameSignUp").blur(function () {
         usernameVerif = $("#usernameSignUp").val();
         if (isValidUsername(usernameVerif) == false) {
@@ -105,11 +125,11 @@ $(document).ready(function () {
             //$('#invalid_email').text()
             //$('#invalid_email').innerHTML()
             //$('#invalid_email').val()
-            $('.username-error-format').show();
+            $('#username-error-format').show();
             return false;
         }
     }).focus(function () {
-        $('.username-error-format').hide();
+        $('#username-error-format').hide();
     });
 
     $("#confirmPasswordSignUp").blur(function () {
@@ -117,11 +137,11 @@ $(document).ready(function () {
         confirmPasswordVerif = $("#confirmPasswordSignUp").val();
         
         if (passwordVerif != confirmPasswordVerif) {
-            $('.confirmPassword-error-mismatch').show();
+            $('#confirmPassword-error-mismatch').show();
             return false;
         }
     }).focus(function () {
-        $('.confirmPassword-error-mismatch').hide();
+        $('#confirmPassword-error-mismatch').hide();
     });
 
     function IsEmail(email) {

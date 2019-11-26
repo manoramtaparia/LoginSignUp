@@ -10,6 +10,7 @@
     font-family: roboto;
     user-select: none;
   }
+  
   .hide{
     display: block;
     color: red;
